@@ -1,0 +1,21 @@
+Title: History of Artificial Intelligence
+
+Artificial intelligence (AI) as a field was formally founded at the Dartmouth Conference in 1956, where John McCarthy, Marvin Minsky, Claude Shannon, and others gathered to explore the idea that every aspect of learning and intelligence could be described precisely enough to simulate it on a machine.
+
+The early years of AI (1956–1974) were marked by optimism. Programs like the Logic Theorist (1956) and the General Problem Solver (1957) demonstrated that machines could perform symbolic reasoning. ELIZA (1966), developed at MIT, created the illusion of human conversation using pattern matching.
+
+The first AI winter (1974–1980) arrived when funding agencies grew frustrated with the lack of progress. Limitations of computing hardware, the combinatorial explosion in search problems, and overpromising by researchers all contributed.
+
+Expert systems dominated the 1980s. Systems like MYCIN (medical diagnosis) and XCON (computer configuration) encoded human knowledge in rule-based systems and showed commercial value. Japan launched its Fifth Generation Computer project, spurring Western investment.
+
+The second AI winter (1987–1993) followed as expert systems proved brittle and expensive to maintain. The specialized hardware industry collapsed.
+
+The connectionist revival of the 1990s brought neural networks back. Yann LeCun demonstrated backpropagation for handwritten digit recognition. Support Vector Machines (SVMs) became a dominant approach for classification.
+
+The deep learning revolution began around 2012 when AlexNet, a convolutional neural network by Alex Krizhevsky, Geoffrey Hinton, and Ilya Sutskever, won the ImageNet competition by a large margin, reducing the error rate from 26% to 15%.
+
+Transformers, introduced in the paper "Attention Is All You Need" (Vaswani et al., 2017), fundamentally changed natural language processing. Models like BERT (2018), GPT-2 (2019), and GPT-3 (2020) demonstrated emergent capabilities at scale.
+
+Large Language Models (LLMs) emerged as a dominant paradigm from 2020 onward. OpenAI's ChatGPT (2022) brought conversational AI to the mainstream. Google's PaLM, Meta's LLaMA, and Anthropic's Claude followed.
+
+By 2024, AI assistants, autonomous agents, and multimodal systems had become integrated into professional workflows, raising important questions about alignment, safety, and economic impact.
