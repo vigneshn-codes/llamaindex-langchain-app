@@ -1,0 +1,25 @@
+Title: Neural Networks and Deep Learning
+
+Neural networks are computational models inspired by the biological structure of the brain, composed of layers of interconnected nodes (neurons) that process information.
+
+The perceptron, introduced by Frank Rosenblatt in 1958, is the simplest neural network — a single layer that performs binary classification. The multilayer perceptron (MLP) adds hidden layers and uses backpropagation to train.
+
+Backpropagation is the algorithm for computing gradients of the loss function with respect to network weights. It applies the chain rule of calculus to propagate error signals backward through layers, enabling efficient gradient computation for optimization.
+
+Activation functions introduce non-linearity, allowing networks to learn complex patterns. Common functions include Sigmoid (maps to 0–1, used historically), Tanh (maps to -1 to 1), ReLU (Rectified Linear Unit: max(0,x), dominant in hidden layers), Leaky ReLU, GELU (used in Transformers), and Softmax (for output layers in classification).
+
+Convolutional Neural Networks (CNNs) are specialized for grid-like data (images, audio). Convolutional layers apply learned filters to detect local features; pooling layers reduce spatial dimensions. Famous architectures include LeNet, AlexNet, VGG, ResNet (residual connections), and EfficientNet.
+
+Recurrent Neural Networks (RNNs) process sequential data by maintaining a hidden state that persists across time steps. Long Short-Term Memory (LSTM) and Gated Recurrent Units (GRUs) address the vanishing gradient problem that limits plain RNNs.
+
+The Transformer architecture (2017) replaced RNNs for sequence modeling. It uses self-attention mechanisms to weigh the importance of each position relative to every other position, enabling parallelization. The encoder processes input; the decoder generates output. Positional encodings inject sequence order information.
+
+Attention mechanisms compute a weighted sum of values based on the similarity between queries and keys. Multi-head attention runs multiple attention operations in parallel, capturing different relationship types. This is the foundation for BERT, GPT, T5, and all modern LLMs.
+
+Batch normalization normalizes layer inputs across the batch dimension, accelerating training and improving stability. Layer normalization normalizes across features and is preferred in Transformer architectures.
+
+Dropout regularization randomly sets a fraction of activations to zero during training, forcing the network to learn redundant representations and improving generalization.
+
+Generative Adversarial Networks (GANs), introduced by Ian Goodfellow in 2014, pit a generator network against a discriminator network. The generator learns to produce realistic samples while the discriminator learns to distinguish real from fake.
+
+Diffusion models, now dominant in image generation, work by learning to denoise progressively noised images. Models like DALL-E 2, Stable Diffusion, and Midjourney use diffusion processes.

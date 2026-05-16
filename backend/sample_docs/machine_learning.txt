@@ -1,0 +1,23 @@
+Title: Core Concepts in Machine Learning
+
+Machine learning (ML) is a subset of artificial intelligence that enables systems to learn from data and improve their performance without being explicitly programmed for each task.
+
+Supervised Learning is the most common paradigm. The model is trained on labeled examples — input-output pairs — and learns to map inputs to outputs. Common algorithms include linear regression (for continuous outputs), logistic regression (for binary classification), decision trees, random forests, gradient boosting (XGBoost, LightGBM), and neural networks.
+
+Unsupervised Learning involves discovering structure in unlabeled data. Clustering (k-means, DBSCAN, hierarchical clustering) groups similar data points. Dimensionality reduction techniques like PCA and t-SNE help visualize high-dimensional data. Autoencoders learn compact representations.
+
+Reinforcement Learning (RL) trains an agent to take actions in an environment to maximize a cumulative reward signal. Key concepts include the Markov Decision Process (MDP), policy, value function, and Q-learning. Deep RL (DQN, PPO, SAC) combines neural networks with RL and achieved superhuman performance in games like Go and StarCraft.
+
+Overfitting occurs when a model memorizes training data but fails to generalize to new examples. Techniques to combat overfitting include regularization (L1 Lasso, L2 Ridge), dropout (randomly zeroing neurons during training), early stopping, and data augmentation.
+
+Bias-variance tradeoff describes the tension between a model's ability to fit training data (low bias) and its ability to generalize (low variance). Simple models have high bias (underfitting); complex models have high variance (overfitting). Ensemble methods like bagging and boosting manage this tradeoff.
+
+Feature engineering is the process of transforming raw data into features that better represent the underlying problem. It includes normalization, encoding categorical variables, handling missing values, and creating interaction features. Good feature engineering often matters more than algorithm choice.
+
+Cross-validation is a technique to assess how a model will generalize. K-fold cross-validation splits data into k subsets, trains on k-1 folds, and validates on the remaining fold, rotating through all folds.
+
+Gradient descent is the optimization algorithm used to minimize the loss function. Variants include Stochastic Gradient Descent (SGD), Mini-batch SGD, Adam, RMSProp, and AdaGrad. Learning rate scheduling is crucial for stable training.
+
+Transfer learning allows models pre-trained on large datasets to be fine-tuned for specific downstream tasks with less data. It underpins the success of models like BERT, ResNet, and CLIP across many domains.
+
+Evaluation metrics vary by task: accuracy, precision, recall, F1-score, and ROC-AUC for classification; MAE, RMSE, and R² for regression; BLEU, ROUGE, and perplexity for text generation.

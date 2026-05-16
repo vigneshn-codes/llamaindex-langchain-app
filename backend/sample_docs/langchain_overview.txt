@@ -1,0 +1,31 @@
+Title: LangChain Framework Overview
+
+LangChain is a framework for developing applications powered by language models. It emphasizes composability, enabling developers to chain together components to build complex LLM-powered workflows.
+
+Core Philosophy: LangChain treats LLM interactions as composable pipelines. It focuses on orchestration — connecting LLMs with tools, memory, data sources, and other agents through a flexible chain architecture.
+
+Key Components:
+
+LangChain Expression Language (LCEL): The modern way to build chains using the pipe operator (|). Chains are built by composing Runnables: prompt | llm | output_parser. LCEL supports streaming, async, batch, and parallel execution natively.
+
+Chat Models and LLMs: Unified interface for 50+ model providers (OpenAI, Anthropic, Google, Hugging Face, Ollama). ChatOpenAI, ChatAnthropic, ChatGoogleGenerativeAI all implement the same BaseChatModel interface with invoke(), stream(), and batch() methods.
+
+Prompt Templates: Structured ways to construct prompts. ChatPromptTemplate composes system and human messages. FewShotPromptTemplate adds examples. MessagesPlaceholder inserts conversation history. Prompts are serializable and reusable.
+
+Document Loaders: Load data from 100+ sources. PyPDFLoader, WebBaseLoader, CSVLoader, NotionDirectoryLoader, and more. Part of langchain-community package.
+
+Text Splitters: Divide documents into chunks. RecursiveCharacterTextSplitter is the recommended default — it tries to split on paragraphs, then sentences, then words. CharacterTextSplitter, TokenTextSplitter, MarkdownHeaderTextSplitter for specific use cases.
+
+Vector Stores: Integrations with 50+ vector databases. Chroma (in-memory and persistent), FAISS (local), Pinecone, Weaviate, Qdrant, pgvector. All implement the same VectorStore interface with similarity_search() and as_retriever().
+
+Retrievers: Turn vector stores into retrievers. MultiQueryRetriever generates multiple query variants. ContextualCompressionRetriever compresses retrieved docs. EnsembleRetriever combines multiple retrievers. ParentDocumentRetriever retrieves parent chunks for context.
+
+Chains: Sequences of operations. RetrievalQA is the classic RAG chain. ConversationalRetrievalChain adds memory. create_stuff_documents_chain and create_retrieval_chain are the modern LCEL equivalents.
+
+Memory: Persist conversation history. ConversationBufferMemory stores all messages. ConversationSummaryMemory summarizes older messages. ConversationKGMemory builds a knowledge graph from conversation.
+
+Agents: LLMs that decide which tools to use. AgentExecutor with tools like Tavily search, Python REPL, or custom functions. Tool calling agents use OpenAI function calling for structured tool selection.
+
+LangSmith: The observability platform for LangChain. Provides tracing, evaluation, datasets, and monitoring. Set LANGCHAIN_TRACING_V2=true to enable automatic tracing.
+
+LangChain Strengths: Best-in-class agent and tool-use framework, widest ecosystem of integrations, strong conversational memory support, production-ready with LangServe for deployment, active community.

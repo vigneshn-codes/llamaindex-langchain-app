@@ -1,0 +1,27 @@
+Title: LlamaIndex Framework Overview
+
+LlamaIndex (formerly GPT Index) is a data framework for building LLM-powered applications over private or domain-specific data. It focuses on efficient data ingestion, indexing, and retrieval.
+
+Core Philosophy: LlamaIndex treats data as a first-class citizen. Its primary goal is to connect LLMs with external data sources through structured indexing, enabling precise retrieval-augmented generation (RAG).
+
+Key Components:
+
+Documents and Nodes: LlamaIndex's fundamental data units. A Document is raw text from any source (PDFs, databases, APIs). A Node is a chunk of a Document with associated metadata and relationships to other nodes.
+
+Data Connectors (Readers): Pre-built connectors for 100+ data sources — PDFs, Word docs, Notion, Confluence, Slack, Google Drive, databases, and more — via the LlamaHub library. SimpleDirectoryReader handles local files automatically detecting file types.
+
+Indexes: The heart of LlamaIndex. A VectorStoreIndex converts nodes into vector embeddings and stores them for semantic search. SummaryIndex creates a linked list of nodes for sequential traversal. KeywordTableIndex builds an inverted keyword index. TreeIndex creates a hierarchical summarization structure.
+
+Query Engines: High-level interfaces for querying an index. The RetrieverQueryEngine retrieves relevant nodes then synthesizes an answer. SubQuestionQueryEngine breaks complex questions into sub-questions. RouterQueryEngine routes queries to the most appropriate engine.
+
+Retrievers: Control how nodes are fetched. VectorIndexRetriever performs similarity search. BM25Retriever uses keyword-based sparse retrieval. HybridRetriever combines dense and sparse retrieval. Retrievers can be configured with similarity_top_k to control how many nodes are returned.
+
+Response Synthesizers: Determine how retrieved context is used to generate an answer. Modes include compact (pack chunks into fewer LLM calls), refine (iteratively refine answer over each chunk), tree_summarize (build a tree of summaries), and accumulate (generate and concatenate answers per chunk).
+
+Node Postprocessors: Transform retrieved nodes before synthesis. SimilarityPostprocessor filters below a threshold. KeywordNodePostprocessor filters by keywords. LLMRerank re-ranks nodes using an LLM.
+
+Observability: LlamaIndex integrates with LlamaTrace (Arize Phoenix) for tracing and evaluation. Built-in callbacks track token usage, embedding calls, and LLM calls.
+
+LlamaIndex Strengths: Excellent for complex document retrieval scenarios, supports advanced indexing strategies, rich ecosystem of data connectors, strong support for structured data and knowledge graphs, built-in evaluation framework.
+
+Version: LlamaIndex v0.10+ restructured into a modular package system (llama-index-core, llama-index-llms-openai, etc.) for better extensibility.
